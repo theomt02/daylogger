@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { useState, useEffect } from "react";
 import firebase from "../firebase";
 import { LoginForm, StyledLogin, LoginContainer } from "../LoginStyles";
@@ -32,20 +31,19 @@ const searchArray = (nameKey, term, myArray) => {
   }
 };
 
-const Login = ({ loggedUser, setLoggedUser }) => {
+const Login = ({ setLoggedUser }) => {
   let changedRM = false;
   const [userInput, setUserInput] = useState("");
   const [passInput, setPassInput] = useState("");
-  const [inputRememberMe, setInputRememberMe] = useState(false);
   const history = useHistory();
   const users = useUsers();
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (searchArray(userInput, "username", users) != undefined) {
+    if (searchArray(userInput, "username", users) !== undefined) {
       let user = searchArray(userInput, "username", users);
-      if (user.password == passInput) {
+      if (user.password === passInput) {
         console.log("Correct password");
         logRememberMe(user.id);
       } else {

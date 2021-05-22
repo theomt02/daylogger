@@ -48,8 +48,10 @@ const useDetails = (loggedUser) => {
     firebase
       .firestore()
       .collection("users")
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       .doc(loggedUser.id)
       .collection("entries")
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       .doc(getCurrentPath())
       .get()
       .then((doc) => {

@@ -1,9 +1,6 @@
-import { useState } from "react";
 import styled from "styled-components";
 // Components
 import TestForm from "../components/TestForm";
-// Firebase
-import firebase from "../firebase";
 
 const Home = ({
   setAlert,

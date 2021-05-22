@@ -25,6 +25,7 @@ const useTimes = (sortBy = "DATE_ASC", loggedUser) => {
     const unsubscribe = firebase
       .firestore()
       .collection("users")
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       .doc(loggedUser.id)
       .collection("entries")
       .orderBy(SORT_OPTIONS[sortBy].column, SORT_OPTIONS[sortBy].direction)
