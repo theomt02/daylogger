@@ -17,7 +17,6 @@ import { Switch, Route } from "react-router-dom";
 function App() {
   // Authentication
   const [loggedUser, setLoggedUser] = useState({});
-  const [latestUser, setLatestUser] = useState({});
   // Alert
   const [alertColor, setAlertColor] = useState("");
   const [alertMessage, setAlertMessage] = useState("");

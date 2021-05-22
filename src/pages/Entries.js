@@ -183,11 +183,6 @@ const StyledTimesList = styled.div`
   border-radius: 10px;
   text-align: initial;
 `;
-const Code = styled.code`
-  font-family: "Courier New", monospace;
-  color: darkblue;
-  font-weight: bolder;
-`;
 const List = styled.table`
   width: 100%;
   border: 1px solid #272727;

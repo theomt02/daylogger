@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 // Styles
-import styled from "styled-components";
 import { LoginForm, StyledLogin, LoginContainer } from "../LoginStyles";
 // Link
 import { Link, useHistory } from "react-router-dom";
@@ -62,10 +61,10 @@ const CreateAccount = () => {
     if (pInput !== cpInput) {
       return console.error("Error!!!!!! enter the same password idiot");
     }
-    if (pInput == null || pInput == undefined || pInput == "") {
+    if (pInput === null || pInput === undefined || pInput === "") {
       return console.error("pls enter pwd");
     }
-    if (uInput == null || uInput == undefined || uInput == "") {
+    if (uInput === null || uInput === undefined || uInput === "") {
       return console.error("pls enter username");
     }
     // ADD TO FIREBASE

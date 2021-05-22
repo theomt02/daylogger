@@ -37,11 +37,9 @@ const useDetails = (loggedUser) => {
     d2 = new Date(`January 2 2000 ${a}`);
 
     const duration = d2 - d1;
-    let seconds = Math.floor((duration / 1000) % 60),
-      minutes = Math.floor((duration / (1000 * 60)) % 60),
+    let minutes = Math.floor((duration / (1000 * 60)) % 60),
       hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
 
     return `${hours}h${minutes}`;
   };
