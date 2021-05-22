@@ -48,6 +48,7 @@ const useDetails = (loggedUser) => {
     firebase
       .firestore()
       .collection("users")
+      // Please work netlify
       // eslint-disable-next-line react-hooks/exhaustive-deps
       .doc(loggedUser.id)
       .collection("entries")
