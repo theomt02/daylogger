@@ -116,12 +116,15 @@ const Login = ({ loggedUser, setLoggedUser }) => {
               onChange={(e) => setPassInput(e.currentTarget.value)}
             />
           </div>
-          <input
-            type="checkbox"
-            name="rememberMe"
-            id="rememberMe"
-            onChange={(e) => rememberMeHandle(e.currentTarget.checked)}
-          />
+          <div>
+            <label htmlFor="rememberMe">Remember me?</label>
+            <input
+              type="checkbox"
+              name="rememberMe"
+              id="rememberMe"
+              onChange={(e) => rememberMeHandle(e.currentTarget.checked)}
+            />
+          </div>
           <button>Submit</button>
         </LoginForm>
         <Link to="/createaccount">
