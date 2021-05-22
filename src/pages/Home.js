@@ -24,6 +24,7 @@ const Home = ({
           alertOpacity={alertOpacity}
           alertOn={alertOn}
           loggedUser={loggedUser}
+          // EPIC
         />
       </Card>
     </StyledHome>
